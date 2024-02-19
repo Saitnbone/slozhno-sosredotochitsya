@@ -40,3 +40,24 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
+
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+  outline: none;
+}
+
+button:hover {
+  outline: 1px solid currentColor;
+  cursor: pointer;
+  text-decoration: underline currentColor;
+}
+
+a {
+  text-decoration: none;
+}
