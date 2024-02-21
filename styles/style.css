@@ -16,9 +16,6 @@
 ---------------------------------------------------------------
 */
 
-@media (width >= 1024) {
-}
-
 .header {
   background: url("../images/cover-image-light.png");
   background-position: center;
@@ -81,7 +78,7 @@
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
-.title__article {
+.header__article {
   text-align: right;
   background-color: var(--background-color);
   font-size: 1.125rem;
@@ -89,9 +86,58 @@
   margin-block-start: 11.5%;
   line-height: 23.4px;
   font-weight: 700;
-  width: 50%; /* Занимаем 50% ширины экрана */
-  margin-left: auto; /* Автоматический отступ слева */
-  margin-right: 0;
+  inline-size: 50%;
+  margin-inline-start: auto;
+  margin-inline-end: 0;
+}
+
+/* Медиазапросы для блока header */
+
+@media (width <= 768px) {
+  .header {
+    aspect-ratio: 4/3;
+  }
+
+  .header__theme-menu {
+    margin-block-start: 24%;
+    text-align: right;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    margin-block-start: 23.5%;
+  }
+
+  .header__article {
+    margin-block-start: 21.8%;
+    margin-block-end: 22.7%;
+    inline-size: 49%;
+    margin-inline-end: 1%;
+  }
+}
+
+@media (width <= 375px) {
+  .header {
+    padding: 0 2.4vi;
+  }
+  .header__theme-menu {
+    margin-block-start: 20.6%;
+  }
+  .header__title {
+    position: static;
+    margin-block-start: 18.6%;
+  }
+
+  .header__article {
+    inline-size: 100%;
+    margin-block-start: 15.7%;
+    margin-block-end: 18.6%;
+  }
 }
 
 /* 
@@ -99,9 +145,23 @@
                     Cтили для блока main
 ---------------------------------------------------------------
 */
+
 main {
   padding: 0 2vi;
-  margin-block-start: 5.8vi;
+}
+
+.main__section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.main__section:first-child {
+  margin-block-start: 60px;
+}
+
+.main__section:not(:first-child) {
+  margin-block-start: 80px;
 }
 
 .main__title {
@@ -121,9 +181,6 @@ main {
 }
 
 .main__section-centrality {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
 }
 
 .main__centrelity-block {
@@ -140,15 +197,10 @@ main {
 .main__paragraph {
   line-height: 23.4px;
   font-size: 18px;
-  letter-spacing: 0%;
 }
 
 .main__section-concentration {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
-  gap: 20px;
-  margin-top: 7.7vi;
 }
 
 .main__section-concentration-title {
@@ -160,13 +212,6 @@ main {
   grid-template-columns: repeat(3, 1fr);
   grid-column-start: span 3;
   gap: 20px;
-}
-
-.main__section-adviсe {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 5.5vi;
 }
 
 .main__advice-block {
@@ -193,8 +238,9 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1%;
-  margin-top: 7.6vi;
+  /* margin-top: 7.6vi; */
 }
+
 .main__section-images-title {
   font-size: 18px;
   background-color: var(--background-color);
@@ -237,6 +283,46 @@ main {
   grid-column: span 2;
   grid-row: span 2;
 }
+
+/* Медиазапросы для блока main */
+
+@media (width <= 768px) {
+  .main {
+    margin-block-start: 8vi;
+  }
+}
+
+@media (width <= 375px) {
+  .main {
+    padding: 0 2.5vi;
+    margin-block-start: 6.1vb;
+  }
+
+  .main__section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main__mobile-section:not(:last-child) {
+    margin-block-end: 50px;
+  }
+
+  .main__section-centrality-title {
+    inline-size: 98%;
+  }
+
+  .main__section-concentration-paragraph-block {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+
+  .list-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
 /* 
 ---------------------------------------------------------------
                     Cтили для блока footer
@@ -247,7 +333,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-block-start: 6vi;
+  margin-block-start: 60px;
   aspect-ratio: 4/3;
 }
 
@@ -256,11 +342,23 @@ main {
   text-align: center;
   color: var(--title-color);
   line-height: 82.5%;
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
-/* 
----------------------------------------------------------------
-                    Медиа-запросы 
----------------------------------------------------------------
-*/
+/* Медиазапросы для блока footer */
+
+@media (width <= 768px) {
+  .footer__title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+}
+
+@media (width <= 375px) {
+  .footer {
+    aspect-ratio: 4 / 7;
+    margin-block-start: 40px;
+  }
+  .footer__title {
+    padding-block-start: 1%;
+  }
+}

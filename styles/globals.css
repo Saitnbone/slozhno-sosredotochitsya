@@ -58,6 +58,22 @@ button:hover {
   text-decoration: underline currentColor;
 }
 
+button:focus {
+  outline: none;
+}
+
+button:focus-visible {
+  border-bottom: 1px solid currentColor;
+}
+
 a {
   text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+a:focus-visible {
+  outline: 1px solid currentColor;
 }
