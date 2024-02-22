@@ -7,5 +7,8 @@
   --accent-color: rgb(255, 0, 112);
   --background-color: rgb(255, 141, 203);
   --title-color: rgb(255, 194, 230);
+  --opacity-color: rgba(255, 0, 112, 0.5);
   --text-color: rgb(53, 52, 48);
+  --font-bold: 700;
+  --font-regular: 400;
 }
