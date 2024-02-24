@@ -4,11 +4,16 @@
 */
 
 :root {
+  --display-settings: none
+  --text-color: rgb(53, 52, 48);
+  --second-text-color: rgb(53, 52, 48);
+  --background-image: url("/images/cover-image-light.png");
+  --title-color: rgb(255, 194, 230);
+  --second-title-color: rgb(53, 52, 48);
   --accent-color: rgb(255, 0, 112);
   --background-color: rgb(255, 141, 203);
-  --title-color: rgb(255, 194, 230);
+  --page-color: rgb(255, 241, 247);
   --opacity-color: rgba(255, 0, 112, 0.5);
-  --text-color: rgb(53, 52, 48);
   --font-bold: 700;
   --font-regular: 400;
 }

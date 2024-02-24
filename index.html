@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <meta name="color-scheme" content="dark light">  -->
+    <meta name="color-scheme" content="dark light" />
+    <link rel="icon" href="./images/favicon.ico" />
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
@@ -13,9 +15,13 @@
     <link rel="stylesheet" href="./styles/light.css" />
     <title>Сложно сосредоточиться</title>
   </head>
-  <body class="page theme_dark">
+  <body class="page theme_dark theme-light">
     <header class="header decorated-zone">
-      <nav class="header__theme-menu">
+      <div class="pseudo-block" aria-hidden="true">
+        <span class="pseudo-block__rec">rec</span>
+        <span class="pseudo-block__circle"></span>
+      </div>
+      <nav class="header__theme-menu header__theme-menu_dark">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
             <button
@@ -41,7 +47,7 @@
           </li>
         </ul>
       </nav>
-      <h1 class="title header__title">no focus</h1>
+      <h1 class="title header__title title_dark">no focus</h1>
       <article class="header__article">
         <p class="header__article-title">
           Что делать, когда не можешь делать ничего <br />
@@ -203,7 +209,7 @@
             <img
               class="list-images__item-image"
               src="./images/sunset.png"
-              alt=""
+              alt="Изображение берега на фоне гор и уходящего заката"
               loading="lazy"
             />
           </li>
@@ -211,7 +217,7 @@
             <img
               class="list-images__item-image"
               src="./images/ice-cream.png"
-              alt=""
+              alt="Изображение мороженного со смайликами"
               loading="lazy"
             />
           </li>
@@ -219,7 +225,7 @@
             <img
               class="list-images__item-image"
               src="./images/tape.png"
-              alt=""
+              alt="Изображение с аудиокассетой"
               loading="lazy"
             />
           </li>
@@ -227,7 +233,7 @@
             <img
               class="list-images__item-image"
               src="./images/books.png"
-              alt=""
+              alt="Изображение со стопкой книг"
               loading="lazy"
             />
           </li>
@@ -235,7 +241,7 @@
             <img
               class="list-images__item-image"
               src="./images/street.png"
-              alt=""
+              alt="ИЗображение с улицой восточно-азитского города"
               loading="lazy"
             />
           </li>
@@ -243,7 +249,7 @@
       </section>
     </main>
     <footer class="footer decorated-zone">
-      <h2 class="title footer__title">focus</h2>
+      <h2 class="title footer__title title_dark">focus</h2>
     </footer>
     <script src="./scripts/script.js"></script>
   </body>

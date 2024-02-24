@@ -55,7 +55,6 @@ button {
 button:hover {
   outline: 1px solid currentColor;
   cursor: pointer;
-  text-decoration: underline currentColor;
 }
 
 button:focus {
@@ -72,6 +71,10 @@ a {
 
 a:focus {
   outline: none;
+}
+
+a:hover {
+  border-bottom: 1px solid currentColor;
 }
 
 a:focus-visible {
