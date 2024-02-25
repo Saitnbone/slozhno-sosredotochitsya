@@ -21,8 +21,8 @@
   block-size: 25px;
   z-index: 0;
   text-transform: uppercase;
-  top: 22px;
-  right: 22px;
+  top: 1.313rem;
+  right: 1.625rem;
 }
 
 .pseudo-block__rec {
@@ -36,16 +36,13 @@
 
 .pseudo-block__circle {
   display: block;
-  /* position: absolute; */
   border-radius: 50%;
-  margin-inline-start: 13px;
+  margin-inline-start: 17px;
   margin-block-start: 7px;
   width: 9px;
   height: 9px;
   background-color: var(--second-text-color);
   box-shadow: 0px 0px 4px 2px rgb(255, 0, 112);
-  /* top: 22px;
-  right: 40px; */
   z-index: 0;
 }
 
@@ -56,7 +53,6 @@
 */
 
 .header {
-  background: var(--background-image);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -100,7 +96,7 @@
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid currentColor;
+  outline: 1px solid currentColor;
   pointer-events: none;
 }
 
@@ -112,8 +108,7 @@
 }
 
 .header__title {
-  position: relative;
-  right: 2%;
+  margin-inline-start: -2%;
   font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
   line-height: 82.5%;
   margin-block-start: 28%;
@@ -122,7 +117,7 @@
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
-.header__article {
+.header__text {
   text-align: right;
   background-color: var(--background-color);
   text-align: left;
@@ -130,9 +125,6 @@
   inline-size: 50%;
   margin-inline-start: auto;
   margin-inline-end: 0;
-}
-
-.header__article-title {
   color: var(--second-title-color);
   font-size: 18px;
   line-height: 23.4px;
@@ -162,7 +154,7 @@
     text-shadow: 4px 4px 0 var(--text-shadow);
   }
 
-  .header__article {
+  .header__text {
     margin-block-start: 21.8%;
     margin-block-end: 22.7%;
     inline-size: 50%;
@@ -171,7 +163,12 @@
 }
 
 @media (width <=767px) {
-  .header__article {
+  .pseudo-block {
+    top: clamp(0.688rem, 2.551vw + 0.09rem, 1.313rem);
+    right: clamp(1rem, 2.551vw + 0.402rem, 1.625rem);
+  }
+
+  .header__text {
     inline-size: 100%;
     margin-block-start: 16.7%;
     margin-block-end: 15.6%;
@@ -183,11 +180,16 @@
     padding: 10px;
   }
   .header__theme-menu {
-    margin-block-start: 17.6%;
+    margin-block-start: 17.2%;
   }
   .header__title {
+    margin-inline-start: 0;
     position: static;
     margin-block-start: 18.6%;
+  }
+
+  .header__text {
+    margin-block-start: 16%;
   }
 }
 
@@ -197,7 +199,7 @@
 ---------------------------------------------------------------
 */
 
-main {
+.main {
   padding: 0 20px;
 }
 
@@ -413,7 +415,6 @@ main {
   justify-content: center;
   align-items: center;
   margin-block-start: 60px;
-  /* min-height: 100vh; */
   aspect-ratio: 4/3;
   padding: 20px;
 }
@@ -447,6 +448,6 @@ main {
     min-height: 0;
   }
   .footer__title {
-    padding-block-start: 1%;
+    margin-block-start: 4%;
   }
 }

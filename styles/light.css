@@ -12,7 +12,7 @@
   --display-settings: none;
   --text-color: rgb(53, 52, 48);
   --second-text-color: rgb(53, 52, 48);
-  --background-image: url("/images/cover-image-light.png");
+  --background-image: url("../images/cover-image-light.png");
   --title-color: rgb(255, 194, 230);
   --second-title-color: rgb(53, 52, 48);
   --accent-color: rgb(255, 0, 112);
@@ -26,7 +26,7 @@
     --display-settings: none;
     --text-color: rgb(53, 52, 48);
     --second-text-color: rgb(53, 52, 48);
-    --background-image: url("/images/cover-image-light.png");
+    --background-image: url("../images/cover-image-light.png");
     --title-color: rgb(255, 194, 230);
     --second-title-color: rgb(53, 52, 48);
     --accent-color: rgb(255, 0, 112);
